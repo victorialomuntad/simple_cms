@@ -1,0 +1,26 @@
+<html>
+  <head>
+  <title> </title>
+  </head>
+
+  <body>
+    <% @array.each do |n| %>
+      <%= n %>
+      <br/>
+    <% end %>
+
+    <a href="/demo/index">index page</a> 
+    <br/>
+    <%= link_to('index_page',{:action => 'hello'})  %> 
+    <br/>
+    <%=link_to('index with parameter',{:action => 'hello', :id => 20, :page => 5})  %>
+
+    <br/>
+    ID: <%= params[:id] %> <br/>
+    ID: <%= @id %> <br/>
+    Next Page: <%= @page.to_i + 1 %> <br/>
+
+    <hr>
+    <%= params.inspect %>
+  </body>
+</html>
